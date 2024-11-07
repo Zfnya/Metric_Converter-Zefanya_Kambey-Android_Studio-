@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/background_color">
+
+    <!-- Judul Aplikasi -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Metric Converter"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color_primary"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp"/>
+
+    <!-- Nama Pembuat -->
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By: Zefanya Kambey"
+        android:textSize="14sp"
+        android:textColor="@color/text_color_accent"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"/>
+
+    <!-- Bagian Dropdown Metrik dan Satuan -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="12dp">
+
+        <!-- Dropdown untuk memilih metrik -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvFromLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Convert From:"
+                android:textSize="16sp"
+                android:textColor="@color/text_color_secondary" />
+
+            <Spinner
+                android:id="@+id/spinnerFromMetric"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spinner_background"
+                android:padding="10dp"
+                android:layout_marginTop="4dp"
+                android:minHeight="48dp"/>
+        </LinearLayout>
+
+        <!-- Dropdown untuk memilih satuan -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvFromUnitLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Unit"
+                android:textSize="16sp"
+                android:textColor="@color/text_color_secondary" />
+
+            <Spinner
+                android:id="@+id/spinnerFromUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spinner_background"
+                android:padding="10dp"
+                android:layout_marginTop="4dp"
+                android:minHeight="48dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Dropdown untuk satuan tujuan -->
+    <TextView
+        android:id="@+id/tvToLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert To:"
+        android:textSize="16sp"
+        android:textColor="@color/text_color_secondary" />
+
+    <Spinner
+        android:id="@+id/spinnerToUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/spinner_background"
+        android:padding="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        android:minHeight="48dp" />
+
+    <!-- Input untuk nilai -->
+    <EditText
+        android:id="@+id/etInputValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter value"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@color/edittext_background"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Hasil konversi -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conversion Result"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/result_color"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
